@@ -1,0 +1,10 @@
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\AngularCliWebApiTemplate.Data.dll.config
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\AngularCliWebApiTemplate.Data.dll
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\AngularCliWebApiTemplate.Data.pdb
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\EntityFramework.dll
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\EntityFramework.xml
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\obj\Debug\AngularCliWebApiTemplate.Data.csprojResolveAssemblyReference.cache
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\obj\Debug\AngularCliWebApiTemplate.Data.dll
+E:\BitBucketProjects\AngularCliWebApiTemplate\AngularCliWebApiTemplate.Data\obj\Debug\AngularCliWebApiTemplate.Data.pdb

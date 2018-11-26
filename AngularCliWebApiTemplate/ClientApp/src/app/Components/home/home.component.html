@@ -1,0 +1,36 @@
+<button data-target="#testModel" data-toggle="modal" class="btn btn-primary"><i class="fa fa-pencil"></i></button>
+
+<div id="testModel" class="modal fade" aria-labelledby="testModellabel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Test Model</h2>
+                <button class="close closeBtnPosition" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form name="testModelForm" #testModelForm="ngForm">
+                <div class="modal-body">
+                    <div class="modal-body-container ">
+                        <div>
+                            <div>
+                                <label>Name:</label>
+                            </div>
+                            <div>
+                                <input class="col-md-12" name="Name" [(ngModel)]="Name" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer col-md-12">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary col-md-12" [disabled]="!testModelForm.form.valid" data-dismiss="modal">Save</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-danger col-md-12" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NotesManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="LastUpdatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastUpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MemberNote">
+    <Key>
+      <PropertyRef Name="MemberNotesID" />
+    </Key>
+    <Property Name="MemberNotesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberID" Type="int" />
+    <Property Name="NotesID" Type="int" />
+  </EntityType>
+  <EntityType Name="Note">
+    <Key>
+      <PropertyRef Name="NotesID" />
+    </Key>
+    <Property Name="NotesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="LastUpdatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastUpdatedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_MemberNotes_Member">
+    <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="MemberNote" Type="Self.MemberNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="MemberNote">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberNotes_Notes">
+    <End Role="Note" Type="Self.Note" Multiplicity="0..1" />
+    <End Role="MemberNote" Type="Self.MemberNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Note">
+        <PropertyRef Name="NotesID" />
+      </Principal>
+      <Dependent Role="MemberNote">
+        <PropertyRef Name="NotesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NotesManagementModelStoreContainer">
+    <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberNote" EntityType="Self.MemberNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Note" EntityType="Self.Note" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MemberNotes_Member" Association="Self.FK_MemberNotes_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="MemberNote" EntitySet="MemberNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberNotes_Notes" Association="Self.FK_MemberNotes_Notes">
+      <End Role="Note" EntitySet="Note" />
+      <End Role="MemberNote" EntitySet="MemberNote" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,35 @@
+﻿.main-container {
+    margin: 20px;
+    padding: 5px;
+}
+
+.head-label {
+    font-size: 30px;
+}
+
+.editBtnColor {
+    padding: 3px 7px;
+    background-color: #2a690f;
+    border: 0px;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.deleteBtnColor {
+    padding: 3px 7px;
+    background-color: #7c1010;
+    border: 0px;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.createBtnPosition {
+    float: right;
+    padding: 4px 8px;
+    margin: 10px 10px 10px 0px;
+    background-color: #1f1d3d;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}

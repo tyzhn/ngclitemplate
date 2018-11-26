@@ -1,0 +1,32 @@
+<div class="main-container">
+    <div>
+        <label class="head-label">Notes-Management System:-</label>
+    </div>
+
+    <div><button class="createBtnPosition" routerLink="/home"><i class="fa fa-plus"></i></button></div>
+
+    <div>
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CreatedBy</th>
+                <th>CreatedOn</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr *ngFor="let note of notes; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{note.Name}}</td>
+                <td><a>{{note.Description}}</a></td>
+                <td>{{note.CreatedBy}}</td>
+                <td>{{note.CreatedOn | date: 'dd/MM/yyyy h:mm a'}}</td>
+                <td>
+                    <button class="editBtnColor"><i class="fa fa-pencil"></i></button>
+                    <button class="deleteBtnColor"><i class="fa fa-trash"></i></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
